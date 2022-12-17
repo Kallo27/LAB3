@@ -1,12 +1,20 @@
 \documentclass[a4paper, 11pt]{article}
-\usepackage{graphicx}
-\usepackage[width=160mm, top=25mm, bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{courier}
 \usepackage{upgreek}
+
+\usepackage[width=160mm, top=25mm, bottom=25mm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+
 \usepackage{amsmath}
 \usepackage{bm}
+
+% impostazioni per tabelle e grafici
+\captionsetup{tableposition=bottom,figureposition=bottom,font=small} % impostazioni didascalie, vedi arte Latex di Pantieri
+\captionsetup{format=hang,labelfont={sf,bf}} % NON OBBLIGATORIO -> VEDI SE TI PIACCIONO LE DIDASCALIE E IN CASO ELIMINA
 
 \title{\textbf{Misura della caratteristica I-V \\ di due diodi a giunzione p-n}}
 \author{Giada Martini \\ Lorenzo Calandra Buonaura}
@@ -81,7 +89,7 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
     \caption{Misure di tensione per la calibrazione di multimetro ed oscilloscopio}
     \label{tab:calibrazione}
 \end{table}
-In Tab.\ref{tab:calibrazione} sono riportati i valori di tensione misurati con oscilloscopio e multimetro per la calibrazione dei due strumenti; sono anche riportati gli errori (per il calcolo vedi \ref{errori}) e il fondo scala utilizzato per ogni misura. Come si può vedere l'errore associato al multimetro risulta trascurabile rispetto a quello associato all'oscilloscopio.
+In Tab.\ref{tab:calibrazione} sono riportati i valori di tensione misurati con oscilloscopio e multimetro per la calibrazione dei due strumenti; sono anche riportati gli errori (per il calcolo vedi Appendice \ref{errori}) e il fondo scala utilizzato per ogni misura. Come si può vedere l'errore associato al multimetro risulta trascurabile rispetto a quello associato all'oscilloscopio.
 
 \begin{figure} [!htb]
     \centering
@@ -215,44 +223,49 @@ Inoltre i valori della tensione di soglia (dopo la quale l'andamento esponenzial
 
 In Fig.\ref{fig:siliciofit} e in Fig.\ref{fig:germaniofit} vediamo i dati per i due diodi delle misure di corrente e tensione effettuate; è stato eseguito un fit con la funzione, riportata in Appendice \ref{carIV}, tenendo $I_0$ e $\eta V_T$ come parametri liberi, tramite ROOT (con minimizzazione del Chi Quadro).
 
-Il tutto è stato messo poi in scala semilogaritmica per rendere più evidente il fit nella parte lineare del grafico (che altrimenti risulta schiacciata sullo 0, come si vede in Fig.\ref{fig:graficototale}).
+Il tutto è stato messo poi in scala semilogaritmica per rendere più evidente il fit nella parte lineare del grafico (che altrimenti risulta schiacciata su $I = 0$, come si vede in Fig.\ref{fig:graficototale}).
 %fit solo in scala semilogaritmica + spiegazione valori attesi/ottenuti%
 
 \section{Risultati finali e conclusioni}
-Dalle le caratteristiche I-V dei due diodi, ci aspettiamo che il silicio  abbia una valore di corrente inversa dell'ordine del $nA$ e un prodotto $\eta V_T$ vicino a 50mV poichè $\eta = 2 $, confrontando con qunato ottenuto tramite fit, i parametri ottenuti si avvicinano ai valori attesi.
-Infatti, $I_0 = ( 2.827 \pm 2.393) \cdot 10^{-5} mA$ e $\eta V_T = (63.35 \pm 5.66) mV  $.
+Dalle le caratteristiche I-V dei due diodi, ci aspettiamo che il silicio  abbia una valore di corrente inversa dell'ordine del $nA$ e un prodotto $\eta V_T$ vicino a 50mV poiché $\eta = 2 $.  Dal fit si ottengo i seguenti valori: $I_0 = ( 2.827 \pm 2.393) \cdot 10^{-8} A$ e $\eta V_T = (63.35 \pm 5.66) mV  $. La corrente $I_0$ risulta essere in accordo con l'ordine di grandezza atteso, mentre si ha che $\eta V_T$ risulta essere leggermente sovrastimato.
 
-Per quanto riguarda il germanio, ci aspettiamo che il valore della corrente inversa sia dell'ordine del $\mu A$ e il prodotto $\eta V_T$ vicino a 26mV (a temperatura ambiente T=300K) poichè $\eta = 1$, tuttavia, dai dati estrapolati tramite fit, per quest'ultimo valore, si ottiene una sovrastima del valore atteso, quasi del doppio. Si ha $I_0 = ( 8.10 \pm 2.53) \cdot 10^{-3} mA $ e $\eta V_T = ( 55.57 \pm 4.20) mV$.  
+Per quanto riguarda il germanio, ci aspettiamo che il valore della corrente inversa sia dell'ordine del $\mu A$ e il prodotto $\eta V_T$ vicino a 26mV (a temperatura ambiente T=300K) poiché $\eta = 1$. Dal fit si ottengo i seguenti valori: $I_0 = ( 8.10 \pm 2.53) \cdot 10^{-6} A $ e $\eta V_T = ( 55.57 \pm 4.20) mV$. Anche in questo caso il valore di $I_0$ è compatibile con i valori attesi, tuttavia il valore di $\eta V_T$ in questo caso è altamente sovrastimato, in quanto quello ottenuto dal fit risulta essere il doppio di quello aspettato.
 
+\newpage
 \section{Appendice}
 
 \subsection{Caratteristica I-V di un diodo}
 \label{carIV}
-La relazione tra corrente (totale) e tensione per un diodo è definita  carratteristica del diodo stesso e segue la relazione:
+La relazione tra corrente (totale) e tensione per un diodo è definita  caratteristica del diodo stesso e segue la relazione:
 \begin{equation}
     I(V)=I_0 (e^{\frac{V}{\eta V_T}}-1)
     \label{eq:caratteristica IV}
 \end{equation}
-dove $I_0$ è definita corrente inversa di saturazione, V  tensione applicata, $\eta$ parametro in funzione del tipo di semiconduttore che si considera ( $\eta = 1 $ per il Ge e $\eta = 2$ per il Si) e $V_T$ è l'equivalente in volt della temperatura.
+dove $I_0$ è definita corrente inversa di saturazione, V è la tensione applicata, $\eta$ è un parametro in funzione del tipo di semiconduttore che si considera ( $\eta = 1 $ per il Ge e $\eta = 2$ per il Si) e $V_T$ è l'equivalente in volt della temperatura.
 \subsection{Calcolo degli errori}
 \label{errori}
 \subsubsection{Oscilloscopio}
-L'errore da assocciare ad una misura effettuata con l'oscilloscopio può essere:
+L'errore da associare ad una misura effettuata con l'oscilloscopio può essere:
 \begin{enumerate}
-    \item $\sigma = \sqrt{(\sigma_L)^2 + (\sigma_Z)^2 + (\sigma_C)^2}$ nel caso in cui gli errori siano tutti indipendenti;
-    \item  $\sigma = \sqrt{(\sigma_L + \sigma_Z)^2 + (\sigma_C)^2}$ nel caso in cui $\sigma_L$ e $\sigma_Z$ siano dipendenti
+    \item $\sigma = \sqrt{(\sigma_L)^2 + (\sigma_Z)^2 + (\sigma_C)^2} \quad$ nel caso in cui gli errori siano tutti indipendenti;
+    \item  $\sigma = \sqrt{(\sigma_L + \sigma_Z)^2 + (\sigma_C)^2} \quad$ nel caso in cui $\sigma_L$ e $\sigma_Z$ siano dipendenti.
     \end{enumerate}
-dove $\sigma_L$ è l'errore sulla lettura, $\sigma_Z$ è l'errore sullo zero e $\sigma_C$ è l'errore sul costruttore. 
+dove $\sigma_L$ è l'errore sulla lettura, $\sigma_Z$ è l'errore sullo zero e $\sigma_C$ è l'errore del costruttore. Per quanto riguarda il caso in esame si è utilizzata la prima relazione in quanto errori indipendenti.
 
-Per quanto riguarda il caso in esame si è utilizzata la prima relazione in quanto errori indipendenti.
+L'errore del costruttore è fisso e pari 3\% quindi $\sigma_C = misura \cdot 0.03$.
 
-Si è calcolato $\sigma_L$ e $\sigma_Z$
-secondo la relazione: 
+Abbiamo invece calcolato $\sigma_L$ e $\sigma_Z$ secondo la relazione: 
 \begin{equation*}
     \sigma = \frac{fondo scala}{5} \cdot ( \# tacchette apprezzabili)
 \end{equation*}
-Mentre l'errore sul costruttore è del 3\% quindi $\sigma_C = misura \cdot 0.03$.
+
+NB: Come si può vedere dai dati riportati in Tab. \ref{tab:silicio} e in Tab. \ref{tab:germanio} gli errori sullo zero risultano sempre essere trascurabili, dal momento che viene fatto con un fondo scala molto più piccolo di quelli utilizzati per le altre misure.
 
 \subsubsection{Multimetro}
+Gli errori associati alle misure effettuate con il multimetro digitale sono indicati dal costruttore sul libretto delle specifiche e dipendono dal range scelto, nel nostro caso (per i range si faccia riferimento ai dati in Tab \ref{tab:calibrazione}, Tab. \ref{tab:silicio} e in Tab. \ref{tab:germanio}) sono pari a:
+\begin{itemize}
+    \item 0.3\% + 1 digit, per le misure di tensione;
+    \item 1.5\% + 2 digit, per le misure di corrente.
+\end{itemize}
 
 \end{document}
