@@ -31,7 +31,6 @@ void fit(){
     graph->SetMarkerStyle(4);
     graph->Draw("AP");
 
-    
     c1->SetLogy();
     c1->SetGrid();
     graph->GetXaxis()->SetTitle("Tensione (mV)");
