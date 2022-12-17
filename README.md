@@ -1,5 +1,5 @@
 # LAB3
-Laboratorio di elettronica - Fisica, terzo anno (A.A. 2022/2023)
+## Laboratorio di elettronica - Fisica, terzo anno (A.A. 2022/2023)
 
 In questa repo verrano caricati tutti i file riguardanti le varie prove di laboratorio svolte durante l'anno.
 
