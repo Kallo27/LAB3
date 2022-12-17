@@ -23,7 +23,7 @@ void SetStyle(){
 TGraphErrors* graph;
 
 void fit(){
-    graph = new TGraphErrors("calibrazione.txt", "%lg %lg %lg %lg");
+    graph = new TGraphErrors("Dati_calibrazione.txt", "%lg %lg %lg %lg");
     graph->SetTitle("Retta di calibrazione");
 
     graph->SetMarkerStyle(4);
