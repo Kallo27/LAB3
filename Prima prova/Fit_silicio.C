@@ -24,7 +24,7 @@ TGraphErrors* graph;
 TCanvas* c1;
 
 void fit(){
-    graph = new TGraphErrors("caratteristica I_V_silicio.txt", "%lg %lg %lg %lg");
+    graph = new TGraphErrors("Dati_silicio.txt", "%lg %lg %lg %lg");
     graph->SetTitle("Diodo al Si");
     c1 = new TCanvas("c1");
     
