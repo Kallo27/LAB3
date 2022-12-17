@@ -24,7 +24,7 @@ TGraphErrors* graph;
 TCanvas* c1;
 
 void fit(){
-    graph = new TGraphErrors("tutti.txt", "%lg %lg %lg %lg");
+    graph = new TGraphErrors("Dati_uniti.txt", "%lg %lg %lg %lg");
     graph->SetTitle("Diodi a confronto");
     c1 = new TCanvas("c1");
     
