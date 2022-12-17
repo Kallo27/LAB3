@@ -24,7 +24,7 @@ TGraphErrors* graph;
 TCanvas* c1;
 
 void fit(){
-    graph = new TGraphErrors("caratteristica I_V_germanio.txt", "%lg %lg %lg %lg");
+    graph = new TGraphErrors("Dati_germanio.txt", "%lg %lg %lg %lg");
     graph->SetTitle("Diodo al Ge");
     c1 = new TCanvas("c1");
     
