@@ -1,0 +1,39 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{courier}
+\usepackage{upgreek}
+
+\usepackage[width=160mm, top=25mm, bottom=25mm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\usepackage{amsmath}
+\usepackage{bm}
+
+% impostazioni per tabelle e grafici
+\captionsetup{tableposition=bottom,figureposition=bottom,font=small} % impostazioni didascalie, vedi arte Latex di Pantieri
+\captionsetup{format=hang,labelfont={sf,bf}} % NON OBBLIGATORIO -> VEDI SE TI PIACCIONO LE DIDASCALIE E IN CASO ELIMINA
+
+\title{\textbf{Misura della caratteristica di uscita di un transistor BJT P-N-P in configurazione a emettitore comune}}
+\author{Giada Martini \\ Lorenzo Calandra Buonaura}
+\date{Turno 3 - 17 Novembre 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Scopo della prova}
+
+\section{Schema del circuito}
+
+\section{Strumenti e materiali utilizzati}
+
+\section{Analisi dati}
+
+\section{Risultati finali e conclusioni}
+
+\section{Appendice}
+
+\end{document}
