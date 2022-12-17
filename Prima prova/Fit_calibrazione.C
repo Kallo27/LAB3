@@ -33,7 +33,6 @@ void fit(){
     graph->GetXaxis()->SetTitle("Multimetro (mV)");
     graph->GetYaxis()->SetTitle("Oscilloscopio (mV)");
     
-
     TF1 *f1 = new TF1("f1", "[0] + [1]*x", -100, 900);
 
     f1->SetParameters(0, 1);
