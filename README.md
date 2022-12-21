@@ -10,4 +10,8 @@ In questo laboratorio abbiamo misurato la caratteristica corrente tensione di du
 Si può visualizzare la relazione in formato pdf [qui](Prima%20prova/Relazione%20-%20Prima%20prova.pdf).
 
 ## Laboratorio 2 - Misura della caratteristica di uscita di un transistor BJT P-N-P in configurazione a emettitore comune
+Tutti i file utilizzati per questa esperienza possono essere trovati [qui](Seconda%20prova).
+
 In questo laboratorio abbiamo preso un transistor BJT P-N-P e abbiamo misurato la sua caratteristica di uscita in configurazione a emettitore comune.
+
+Si può visualizzare la relazione in formato pdf [qui](Seconda%20prova/Relazione%20-%20Seconda%20prova.pdf).
