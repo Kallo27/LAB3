@@ -3,6 +3,7 @@
 \usepackage[italian]{babel}
 \usepackage{courier}
 \usepackage{upgreek}
+\usepackage{longtable}
 
 \usepackage[width=160mm, top=25mm, bottom=25mm]{geometry}
 
@@ -65,10 +66,22 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
 \section{Analisi dati}
 
 \subsection{Caratteristica I-V del transistor BJT}
-\begin{table}[!htb]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
+\begin{longtable}{|c|c|c|c|c|c|}
+    \hline
+    \endfirsthead
+    
+    \multicolumn{6}{r}{\textit{(Continua alla pagina successiva)}}
+    \endfoot
+    
+    \multicolumn{6}{l}{\textit{(Continua dalla pagina precedente)}}
+    \endhead
+
+    \hline
+    \multicolumn{6}{c}{}\\
+    \caption{Valori di tensione e corrente misurati per corrente $I_B = -0.2 mA$.}
+    \label{tab:-0.2 mA}
+    
+    \endlastfoot
         \bm{$V_{oscill.} (V)$} & \bm{$\sigma_{oscill.} (V)$} &         \bm{$I_{mult.} (mA)$} & \bm{$\sigma_{mult.} (mA)$} & \textbf{\textit{
         V/Div}} & \bm{$Range (mA)$} \\
         \hline
@@ -133,17 +146,25 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
         0.10 & 0.01 & 4.87 & 0.09 &	0.05 & 32.00 \\
         \hline 
         0.05 & 0.01 & 0.74 & 0.03 &	0.05 & 32.00 \\
-        \hline 
-    \end{tabular} 
-    \caption{Valori di tensione e corrente misurati per corrente $I_B = -0.2 mA$.}
-    \label{tab:-0.2 mA}
-\end{table}
+\end{longtable}
 
 
-\begin{table}[!htb]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
+\begin{longtable}{|c|c|c|c|c|c|}
+    \hline
+    \endfirsthead
+    
+    \multicolumn{6}{r}{\textit{(Continua alla pagina successiva)}}
+    \endfoot
+    
+    \multicolumn{6}{l}{\textit{(Continua dalla pagina precedente)}}
+    \endhead
+
+    \hline
+    \multicolumn{6}{c}{}\\
+    \caption{Valori di tensione e corrente misurati per corrente $I_B = -0.1 mA$.}
+    \label{tab:-0.1 mA}
+    
+    \endlastfoot
         \bm{$V_{oscill.} (V)$} & \bm{$\sigma_{oscill.} (V)$} &         \bm{$I_{mult.} (mA)$} & \bm{$\sigma_{mult.} (mA)$} & \textbf{\textit{V/Div}} & \bm{$Range (mA)$} \\
         \hline
         4.00 & 0.52 & 19.62 & 0.31 & 1.00 & 32.00 \\
@@ -208,10 +229,7 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
         \hline 
         0.05 & 0.01 & 0.44 & 0.03 &	0.05 & 32.00 \\
         \hline 
-    \end{tabular} 
-    \caption{Valori di tensione e corrente misurati per corrente $I_B = -0.1 mA$.}
-    \label{tab:-0.1 mA}
-\end{table}
+\end{longtable}
 
 
 %DOBBIAMO GUAARDARE IL RANGE E NON RICORDO SE VOLT O MVOLT 
