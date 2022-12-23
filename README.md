@@ -9,6 +9,9 @@ In questo laboratorio abbiamo misurato la caratteristica corrente tensione di du
 
 Si può visualizzare la relazione in formato pdf [qui](Prima%20prova/Relazione%20-%20Prima%20prova.pdf).
 
+### Istruzioni di compilazione:
+Per compilare da terminale bisogna scaricare tutti i file nella [cartella](Prima%20prova); in più è necessario aver installato TeX Live sul proprio dispositivo e l'estensione LaTeX Workshop su VS Code. A questo punto una volta entrati nella cartella corrente bisogna eseguire il comando 'pdflatex main.tex' che compila il main e crea il file 'main.pdf'. Eseguendo poi '.\cleanup.sh' vengono eliminati tutti i file di compilazione automaticamente generati dal computer e si crea il file [pdf](Prima%20prova/Relazione%20-%20Prima%20prova.pdf).
+
 ## Laboratorio 2 - Misura della caratteristica di uscita di un transistor BJT P-N-P in configurazione a emettitore comune
 Tutti i file utilizzati per questa esperienza possono essere trovati [qui](Seconda%20prova).
 
