@@ -31,18 +31,18 @@ Lo scopo della prova è lo studio delle caratteristiche I-V di due diodi a semic
 \begin{figure}[!ht]
   \centering
   \begin{minipage}[b]{0.51\textwidth}
-    \includegraphics[width=76mm]{LAB _ Circuito senza diodo.png}
+    \includegraphics[width=76mm]{Immagini - Prima prova/LAB _ Circuito senza diodo.png}
     \caption{\textit{Circuito per calibrazione.}}
-    \label{fig:Circuitosenzadiodo}
+    \label{fig:circuitosenzadiodo}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.48\textwidth}
-    \includegraphics[width=76mm]{LAB _ Circuito con diodo.png}
+    \includegraphics[width=76mm]{Immagini - Prima prova/LAB _ Circuito con diodo.png}
     \caption{\textit{Circuito con diodo inserito.}}
-    \label{fig:Circuito con diodo}
+    \label{fig:circuitocondiodo}
   \end{minipage}
 \end{figure}
-In Fig.\ref{fig:Circuitosenzadiodo} possiamo vedere il circuito usato per la calibrazione di oscilloscopio e multimetro durante la prima fase dell'esperienza; in questa fase l'oscilloscopio viene collegato nel punto C del circuito. In Fig.\ref{fig:Circuito con diodo}, invece, è stato inserito il diodo (prima Si e poi Ge) fra un capo del multimetro e il GND e in più l'oscilloscopio viene collegato nel punto D: in questo modo è possibile misurare contemporaneamente i valori di corrente e tensione per poi andare a studiare la caratteristica I-V del diodo.
+In Fig.\ref{fig:circuitosenzadiodo} possiamo vedere il circuito usato per la calibrazione di oscilloscopio e multimetro durante la prima fase dell'esperienza; in questa fase l'oscilloscopio viene collegato nel punto C del circuito. In Fig.\ref{fig:circuitocondiodo}, invece, è stato inserito il diodo (prima Si e poi Ge) fra un capo del multimetro e il GND e in più l'oscilloscopio viene collegato nel punto D: in questo modo è possibile misurare contemporaneamente i valori di corrente e tensione per poi andare a studiare la caratteristica I-V del diodo.
 
 \newpage
 \section{Strumenti e materiali utilizzati}
@@ -89,11 +89,11 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
     \caption{Misure di tensione per la calibrazione di multimetro ed oscilloscopio}
     \label{tab:calibrazione}
 \end{table}
-In Tab.\ref{tab:calibrazione} sono riportati i valori di tensione misurati con oscilloscopio e multimetro per la calibrazione dei due strumenti; sono anche riportati gli errori (per il calcolo vedi Appendice \ref{errori}) e il fondo scala utilizzato per ogni misura. Come si può vedere l'errore associato al multimetro risulta trascurabile rispetto a quello associato all'oscilloscopio.
+In Tab.\ref{tab:calibrazione} sono riportati i valori di tensione misurati con oscilloscopio e multimetro per la calibrazione dei due strumenti; sono anche riportati gli errori (per il calcolo vedi Appendice \ref{sec:errori}) e il fondo scala utilizzato per ogni misura. Come si può vedere l'errore associato al multimetro risulta trascurabile rispetto a quello associato all'oscilloscopio.
 
 \begin{figure} [!htb]
     \centering
-    \includegraphics[width = 0.5 \textwidth]{LAB _ Calibrazione.png}
+    \includegraphics[width = 0.5 \textwidth]{Immagini - Prima prova/LAB _ Calibrazione.png}
     \caption{Fit lineare per la calibrazione.}
     \label{fig:calibrazione}
 \end{figure}
@@ -192,22 +192,23 @@ In Fig.\ref{fig:calibrazione} possiamo vedere un grafico che ha sull'asse x i va
     \label{tab:germanio}
 \end{table}
 
-In Tab.\ref{tab:silicio} e in Tab.\ref{tab:germanio} sono riportati i valori di tensione (misurati con l'oscilloscopio) e corrente (misurati con il multimetro) con relativi errori e fondo-scala per i due diodi, rispettivamente al silicio e al germanio. Per il calcolo degli errori vedere Appendice \ref{errori}.
+In Tab.\ref{tab:silicio} e in Tab.\ref{tab:germanio} sono riportati i valori di tensione (misurati con l'oscilloscopio) e corrente (misurati con il multimetro) con relativi errori e fondo-scala per i due diodi, rispettivamente al silicio e al germanio. Per il calcolo degli errori vedere Appendice \ref{sec:errori}.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width = 0.6\textwidth]{LAB _ Grafico totale.png}
+    \includegraphics[width = 0.6\textwidth]{Immagini - Prima prova/LAB _ Grafico totale.png}
     \caption{Grafico di confronto fra le curve caratteristiche I-V dei due diodi utilizzati.}
     \label{fig:graficototale}
 \end{figure}
 
-In Fig.\ref{fig:graficototale} possiamo osservare i dati plottati in un grafico: si può notare subito l'andamento esponenziale delle caratteristiche I-V dei due diodi (vedi Appendice \ref{carIV}). \\
+In Fig.\ref{fig:graficototale} possiamo osservare i dati plottati in un grafico: si può notare subito l'andamento esponenziale delle caratteristiche I-V dei due diodi (vedi Appendice \ref{sec:carIV}).
+
 Inoltre i valori della tensione di soglia (dopo la quale l'andamento esponenziale prevale) risultano essere qualitativamente compatibili con i valori attesi, rispettivamente di 0.2 V per il germanio e di 0.6 V per il silicio.
 \\
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width = 0.8\textwidth]{LAB _ Fit silicio.png}
+    \includegraphics[width = 0.8\textwidth]{Immagini - Prima prova/LAB _ Fit silicio.png}
     \caption{Caratteristica I-V del diodo al silicio con fit lineare.}
     \label{fig:siliciofit}
 \end{figure}
@@ -216,12 +217,12 @@ Inoltre i valori della tensione di soglia (dopo la quale l'andamento esponenzial
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width = 0.8\textwidth]{LAB _ Fit germanio.png}
+    \includegraphics[width = 0.8\textwidth]{Immagini - Prima prova/LAB _ Fit germanio.png}
     \caption{Caratteristica I-V del diodo al germanio con fit lineare}
     \label{fig:germaniofit}
 \end{figure}
 
-In Fig.\ref{fig:siliciofit} e in Fig.\ref{fig:germaniofit} vediamo i dati per i due diodi delle misure di corrente e tensione effettuate; è stato eseguito un fit con la funzione, riportata in Appendice \ref{carIV}, tenendo $I_0$ e $\eta V_T$ come parametri liberi, tramite ROOT (con minimizzazione del Chi Quadro).
+In Fig.\ref{fig:siliciofit} e in Fig.\ref{fig:germaniofit} vediamo i dati per i due diodi delle misure di corrente e tensione effettuate; è stato eseguito un fit con la funzione, riportata in Appendice \ref{sec:carIV}, tenendo $I_0$ e $\eta V_T$ come parametri liberi, tramite ROOT (con minimizzazione del Chi Quadro).
 
 Il tutto è stato messo poi in scala semilogaritmica per rendere più evidente il fit nella parte lineare del grafico (che altrimenti risulta schiacciata su $I = 0$, come si vede in Fig.\ref{fig:graficototale}).
 %fit solo in scala semilogaritmica + spiegazione valori attesi/ottenuti%
@@ -234,16 +235,15 @@ Per quanto riguarda il germanio, ci aspettiamo che il valore della corrente inve
 \newpage
 \section{Appendice}
 
-\subsection{Caratteristica I-V di un diodo}
-\label{carIV}
+\subsection{Caratteristica I-V di un diodo} \label{sec:carIV}
 La relazione tra corrente (totale) e tensione per un diodo è definita  caratteristica del diodo stesso e segue la relazione:
 \begin{equation}
     I(V)=I_0 (e^{\frac{V}{\eta V_T}}-1)
     \label{eq:caratteristica IV}
 \end{equation}
 dove $I_0$ è definita corrente inversa di saturazione, V è la tensione applicata, $\eta$ è un parametro in funzione del tipo di semiconduttore che si considera ( $\eta = 1 $ per il Ge e $\eta = 2$ per il Si) e $V_T$ è l'equivalente in volt della temperatura.
-\subsection{Calcolo degli errori}
-\label{errori}
+
+\subsection{Calcolo degli errori} \label{sec:errori}
 \subsubsection{Oscilloscopio}
 L'errore da associare ad una misura effettuata con l'oscilloscopio può essere:
 \begin{enumerate}
