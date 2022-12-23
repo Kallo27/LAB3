@@ -26,7 +26,9 @@
 \maketitle
 
 \section{Scopo della prova}
-Lo scopo della prova è lo studio della caratteristica di uscita dal transistor BJT in configurazione a emettitore comune per valori fissati di corrente di base $I_B = -200 \mu A $ e $I_B = -100 \mu A$. 
+Lo scopo della prova è lo studio della caratteristica di uscita dal transistor BJT in configurazione a emettitore comune, ossia ottenere i valori della corrente di collettore $I_C$ in funzione della tensione tra collettore ed emettitore $V_{CE}$  per valori fissati di corrente di base $I_B = -200 \mu A $ e $I_B = -100 \mu A$. 
+
+Dal fit lineare pesato delle caratteristica $I_C-V_{CE}$ nella regione attiva, si trovano i parametri che rappresentano la tensione di Early $V_A$ e la resistenza di uscita per un valore fissato di $I_B$, quindi si calcola la conduttanza di uscita $g$ e il guadagno di corrente $\beta$. 
 %sinceramente non so cosa scrivere :)
 
 \section{Schema del circuito}
@@ -45,7 +47,7 @@ Lo scopo della prova è lo studio della caratteristica di uscita dal transistor 
   \end{minipage}
 \end{figure}
 
-In Fig.\ref{fig:Circuito per corrente di base} si può vedere il circuito utilizzato per settare la corrente di base del transistor, prima a $I_B = -200 \mu A $ e poi $I_B = -100 \mu A$; in questo modo è stato possibile infatti impostare la corrente precisa, cortocircuitando i punti A e C del circuito e utilizzando il multimetro digitale collegato fra i punti B e D. In Fig. \ref{fig:Circuito utilizzato per la prova}, invece, si può vedere il circuito effettivamente utilizzato per raccogliere i dati durante l'esperienza; è stato cortocircuitato il collegamento fra B e D in modo da non modificare più la corrente di base e si è invece posizionato il multimetro fra A e C per misurare la corrente in uscita dal transistor. Inoltre al punto C è stato collegato anche l'oscilloscopio per le misure di tensione (ovviamente l'altro capo dell'oscilloscopio è collegato al GND).
+In Fig.\ref{fig:Circuito per corrente di base} si può vedere il circuito utilizzato per settare la corrente di base del transistor, prima a $I_B = -0.2 \; mA $ e poi $I_B = -0.1 \; mA$; in questo modo è stato possibile infatti impostare la corrente precisa, cortocircuitando i punti A e C del circuito e utilizzando il multimetro digitale collegato fra i punti B e D. In Fig.\ref{fig:Circuito utilizzato per la prova}, invece, si può vedere il circuito effettivamente utilizzato per raccogliere i dati durante l'esperienza; è stato cortocircuitato il collegamento fra B e D in modo da non modificare più la corrente di base e si è invece posizionato il multimetro fra A e C per misurare la corrente in uscita dal transistor. Inoltre al punto C è stato collegato anche l'oscilloscopio per le misure di tensione (ovviamente l'altro capo dell'oscilloscopio è collegato al GND).
 
 
 
@@ -64,8 +66,10 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
 
 
 \section{Analisi dati}
+In Tab.\ref{tab:-0.2 mA} e in Tab.\ref{tab:-0.1 mA} sono riportati, con i relativi errori, i valori di tensione tra collettore ed emettitore $V_{CE}$ misurati con l'oscilloscopio e i valori di corrente di uscita $I_C$ ottenuti tramite multimetro, mantenendo una corrente di base costante rispettivamente pari $I_B = -0.2 \;mA $ e $I_B = -0.1 \;mA $; si può notare come siano stati scelti valori di tensione a cui misurare la corrente in uscita uguali per entrambe le correnti di base, in modo da poter poi ottenere una stima del guadagno in corrente. Sono inoltre riportati il fondo-scala dell'oscilloscopio e il range del multimetro per ogni misura. Per il calcolo degli errori vedere Appendice \ref{sec:errori}.
 
-\subsection{Caratteristica I-V del transistor BJT}
+% DOBBIAMO DECIDERE COSA FARE PER I VALORI NEGATIVI DELLE TABELLE: O LI METTIAMO TUTTI NEGATIVI O VA SPECIFICATO CHE LI STIAMO PLOTTANDO CON IL SEGNO OPPOSTO COSì CHE VENGA TUTTO NEL PRIMO QUADRANTE PIUTTOSTO CHE NEL QUARTO. Io metterei tutti i dati negativi, perchè tanto lo spiego dopo che il grafico va nel primo quadrante.
+
 \begin{longtable}{|c|c|c|c|c|c|}
     \hline
     \endfirsthead
@@ -147,7 +151,6 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
         \hline 
         0.05 & 0.01 & 0.74 & 0.03 &	0.05 & 32.00 \\
 \end{longtable}
-
 
 \begin{longtable}{|c|c|c|c|c|c|}
     \hline
@@ -231,10 +234,63 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
         \hline 
 \end{longtable}
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Grafico totale.png}
+    \caption{Grafico di confronto fra le caratteristiche del transistor fissate due correnti di base diverse, $I_B = -0.2 \;mA $ e $I_B = -0.1 \;mA$.}
+    \label{fig:g-tot}
+\end{figure}
 
-%DOBBIAMO GUAARDARE IL RANGE E NON RICORDO SE VOLT O MVOLT 
+In Fig.\ref{fig:g-tot} possiamo vedere il confronto fra le curve caratteristiche I-V plottate per le due correnti di base. In primo luogo bisogna notare che gli assi presentano il segno - nell'unità di misura erchè in realtà tutte le grandezze rappresentate sono negative; per evitare di rappresentare il tutto nel quarto quadrante del piano cartesiano per convenzione si rappresenta nel primo quadrante specificando il segno opposto degli assi. 
+
+Come possiamo osservare, l'andamento delle curve rispetta qualitativamente quello aspettato (vedi Appendice \ref{sec:curva-caratteristica-transistor}). Inoltre si può subito notare che, invece del plateau, le due curve presentano una parte lineare leggermente inclinata, testimone del cosiddetto \textit{effetto Early} (nella configurazione a emettitore comune questo effetto è molto più accentuato). 
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Fit-200.png}
+    \caption{Fit della parte lineare della caratteristica I-V del transistor, con tensione di base costante pari a $I_B = -0.2 \;mA $.}
+    \label{fig:fit-200}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Fit-100.png}
+    \caption{Fit della parte lineare della caratteristica I-V del transistor, con tensione di base costante pari a $I_B = -0.1 \;mA $.}
+    \label{fig:fit-100}
+\end{figure}
+
+% DA METTERE: spiegazione dei due fit con spiegazione di cosa sono i parametri a e b.
+
+ 
 \section{Risultati finali e conclusioni}
+% DA METTERE: calcolo dei parametri a b g e beta + confronto con valori aspettati + spiegazione effetto Early.
 
+\newpage
 \section{Appendice}
+
+\subsection{Curva caratteristica di un transistor BJT in configurazione CE} \label{sec:curva-caratteristica-transistor}
+
+% DA METTERE: spiegazione della curva caratteristica + spiegazione di perchè fittiamo con una retta.
+
+\subsection{Calcolo degli errori} \label{sec:errori}
+\subsubsection{Oscilloscopio}
+L'errore da associare ad una misura effettuata con l'oscilloscopio può essere:
+\begin{enumerate}
+    \item $\sigma = \sqrt{(\sigma_L)^2 + (\sigma_Z)^2 + (\sigma_C)^2} \quad$ nel caso in cui gli errori siano tutti indipendenti;
+    \item  $\sigma = \sqrt{(\sigma_L + \sigma_Z)^2 + (\sigma_C)^2} \quad$ nel caso in cui $\sigma_L$ e $\sigma_Z$ siano dipendenti.
+    \end{enumerate}
+dove $\sigma_L$ è l'errore sulla lettura, $\sigma_Z$ è l'errore sullo zero e $\sigma_C$ è l'errore del costruttore. Per quanto riguarda il caso in esame si è utilizzata la prima relazione in quanto errori indipendenti.
+
+L'errore del costruttore è fisso e pari 3\% quindi $\sigma_C = misura \cdot 0.03$.
+
+Abbiamo invece calcolato $\sigma_L$ e $\sigma_Z$ secondo la relazione: 
+\begin{equation*}
+    \sigma = \frac{fondo scala}{5} \cdot ( \# tacchette apprezzabili)
+\end{equation*}
+
+NB: In generale gli errori sullo zero risultano sempre essere trascurabili, dal momento che viene fatto con un fondo scala molto più piccolo di quelli utilizzati per le altre misure.
+
+\subsubsection{Multimetro}
+Gli errori associati alle misure effettuate con il multimetro digitale sono indicati dal costruttore sul libretto delle specifiche e dipendono dal range scelto; nel nostro caso (per i range si faccia riferimento ai dati in Tab.\ref{tab:-0.2 mA} e in Tab.\ref{tab:-0.1 mA}) abbiamo solo misure di corrente, per cui abbiamo usato come errore $\sigma = 1.5\% + 2$ digit.
 
 \end{document}
