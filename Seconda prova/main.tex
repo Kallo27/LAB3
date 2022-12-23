@@ -26,10 +26,7 @@
 \maketitle
 
 \section{Scopo della prova}
-Lo scopo della prova è lo studio della caratteristica di uscita dal transistor BJT in configurazione a emettitore comune, ossia ottenere i valori della corrente di collettore $I_C$ in funzione della tensione tra collettore ed emettitore $V_{CE}$  per valori fissati di corrente di base $I_B = -0.2 \; mA $ e $I_B = -0.1 \; mA$. 
-
-Dal fit lineare pesato delle caratteristica $I_C-V_{CE}$ nella regione attiva, si trovano i parametri che rappresentano la tensione di Early $V_A$ e la resistenza di uscita per un valore fissato di $I_B$, quindi si calcola la conduttanza di uscita $g$ e il guadagno di corrente $\beta$. 
-%sinceramente non so cosa scrivere :)
+Lo scopo della prova è lo studio della caratteristica di uscita dal transistor BJT in configurazione a emettitore comune, ossia ottenere i valori della corrente di collettore $I_C$ in funzione della tensione tra collettore ed emettitore $V_{CE}$  per valori fissati di corrente di base $I_B = -0.2 \; mA $ e $I_B = -0.1 \; mA$. Dal fit lineare pesato delle caratteristica $I_C-V_{CE}$ nella regione attiva, si trovano i parametri che rappresentano la tensione di Early $V_A$ e la resistenza di uscita per un valore fissato di $I_B$, quindi si calcola la conduttanza di uscita $g$ e il guadagno di corrente $\beta$. 
 
 \section{Schema del circuito}
 \begin{figure}[!ht]
@@ -58,7 +55,6 @@ Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
     \item Potenziometro da 100 k$\Omega$ sulla base, fissato con una resistenza $R_B = 50 k\Omega$ e un potenziometro da $R_C = 1 k\Omega$ sulla corrente.
     \item Transistor BJT: 2N3906(BU) Silicio P-N-P in configurazione emettitore comune.
 \end{itemize}
-
 
 \section{Analisi dati}
 In Tab.\ref{tab:-0.2 mA} e in Tab.\ref{tab:-0.1 mA} sono riportati, con i relativi errori, i valori di tensione tra collettore ed emettitore $V_{CE}$ misurati con l'oscilloscopio e i valori di corrente di uscita $I_C$ ottenuti tramite multimetro, mantenendo una corrente di base costante rispettivamente pari $I_B = -0.2 \;mA $ e $I_B = -0.1 \;mA $; si può notare come siano stati scelti valori di tensione a cui misurare la corrente in uscita uguali per entrambe le correnti di base, in modo da poter poi ottenere una stima del guadagno in corrente. Sono inoltre riportati il fondo-scala dell'oscilloscopio e il range del multimetro per ogni misura. Per il calcolo degli errori vedere Appendice \ref{sec:errori}.
@@ -234,6 +230,7 @@ In Tab.\ref{tab:-0.2 mA} e in Tab.\ref{tab:-0.1 mA} sono riportati, con i relati
     \label{fig:g-tot}
 \end{figure}
 
+\newpage
 In Fig.\ref{fig:g-tot} possiamo vedere il confronto fra le curve caratteristiche I-V plottate per le due correnti di base. In primo luogo bisogna notare che gli assi presentano il segno - nell'unità di misura perchè in realtà tutte le grandezze rappresentate sono negative; per evitare di rappresentare il tutto nel quarto quadrante del piano cartesiano per convenzione si rappresenta nel primo quadrante specificando il segno opposto degli assi. 
 
 Come possiamo osservare, l'andamento delle curve rispetta qualitativamente quello aspettato (vedi Appendice \ref{sec:curva-caratteristica-transistor}). Inoltre si può subito notare che nella regione attiva, invece del plateau, le due curve presentano una parte lineare leggermente inclinata, testimone del cosiddetto \textit{effetto Early} (nella configurazione a emettitore comune questo effetto è molto più accentuato). 
@@ -252,9 +249,7 @@ Come possiamo osservare, l'andamento delle curve rispetta qualitativamente quell
     \label{fig:fit-100}
 \end{figure}
 
-% DA METTERE: spiegazione dei due fit con spiegazione di cosa sono i parametri a e b.
-
-In Fig.\ref{fig:fit-200} e in Fig.\ref{fig:fit-100} possiamo vedere i due fit lineari della regione attiva (ossia quella per $V_{CE}\geq \sim 1 \;V $) della caratteristica I-V del transistor. La caratteristica nella regione attiva segue l'andamento descritto dall'equazione ... (vedere Appendice \ref{sec:curva-caratteristica-transistor}), quindi è stato fatto un fit lineare del tipo $x = a + by$ e quindi $y = (x-a)/b$, tramite ROOT (con minimizzazione del Chi Quadro). I parametri ottenuti rappresentano: $a$ la tensione di Early $V_A$ (con il segno negativo sempre perchè abbiamo adottato la convenzione di cambiare il segno agli assi) e $b$ il rapporto $\Delta V_{CE} / \Delta I_C$, ossia la resistenza di uscita per un
+In Fig.\ref{fig:fit-200} e in Fig.\ref{fig:fit-100} possiamo vedere i due fit lineari della regione attiva (ossia quella per $V_{CE}\geq \sim 1 \;V $) della caratteristica I-V del transistor. La caratteristica nella regione attiva segue l'andamento descritto dall'equazione (\ref{eq:caratteristica I-V}) (vedere Appendice \ref{sec:curva-caratteristica-transistor}), quindi è stato fatto un fit lineare del tipo $x = a + by$ e quindi $y = (x-a)/b$, tramite ROOT (con minimizzazione del Chi Quadro). I parametri ottenuti rappresentano: $a$ la tensione di Early $V_A$ (con il segno negativo sempre perchè abbiamo adottato la convenzione di cambiare il segno agli assi) e $b$ il rapporto $\Delta V_{CE} / \Delta I_C$, ossia la resistenza di uscita per un
 valore fissato di $I_B$. I valori ottenuti sono: $a = (-17.4 \pm 1.9) \;V$ e $b = (0.57 \pm 0.06) \; V/A$ per il primo valore di corrente di base, mentre per il secondo si ha $a = (-27.1 \pm 4.2) \;V$ e $b = (1.57 \pm 0.22) \; V/A$.
  
 \section{Risultati finali e conclusioni}
@@ -269,11 +264,21 @@ Come ultimo risultato possiamo dare una stima diretta del guadagno in corrente, 
 
 Fissando un valore di tensione $V_{CE} = 2.00 \; V$ si ottiene $\beta = 156 \pm 40$, per un valore di tensione $V_{CE} = 2.60 \; V$ si ottiene $\beta = 163 \pm 41$ e infine per un valore di tensione $V_{CE} = 3.20 \; V$ si ottiene $\beta = 167 \pm 42$ (per il calcolo degli errori vedere Appendice \ref{sec:errori-beta}). Come possiamo vedere otteniamo valori fra loro compatibili; possiamo quindi procedere con una media pesata, da cui otteniamo $\beta = 162 \pm 41$, compatibile con il valore atteso per il guadagno in corrente. 
 
-\newpage
 \section{Appendice}
 
 \subsection{Curva caratteristica di un transistor BJT in configurazione CE} \label{sec:curva-caratteristica-transistor}
+Secondo l'equazione di Ebers-Moll, nella regione attiva la corrente di collettore $I_C$ dipende solo dalla tensione $V_{BE}$ o dalla corrente di base $I_B$, in modo tale che le curve caratteristiche di uscita siano pressoché orizzontali (ossia non c'è dipendenza dalla $V_{CE}$). Tuttavia, si nota che le caratteristiche di uscita hanno una lieve inclinazione e questo fatto viene spiegato dal cosiddetto Effetto Early che modifica l'andamento della corrente $I_C$ seguendo la relazione:
+\begin{equation}
+    I_C = \beta_F I_B (1 + \frac{V_{CE}}{V_A})
+\end{equation}
+dove con $V_A$ si indica la tensione di Early e $\beta_F$ il guadagno in corrente. Come già sottolineato si nota che la configurazione a emettitore comune è molto più sensibile all’effetto Early della configurazione a base comune.
 
+Da queste considerazioni, si comprende il motivo dell'utilizzo del fit lineare pesato della caratteristica $V_{CE}-I_V$ nella regione attiva; esso consente di confrontare l'andamento atteso della corrente $I_C$ dall'equazione di Ebers-Moll con il comportamento ottenuto a causa dell'effetto Early e si sceglie di utilizzare una retta proprio perchè nella regione attiva l'andamento è lineare. 
+Per ciascun valore di $I_B$ la formula per il fit lineare pesato è la seguente:
+\begin{equation} \label{eq:caratteristica I-V}
+    V_{CE} = a + bI_C
+\end{equation}
+in quanto si trascurano gli errori su $I_C$ rispetto a quelli su $V_{CE}$.
 % DA METTERE: spiegazione della curva caratteristica + spiegazione di perchè fittiamo con una retta.
 
 \subsection{Calcolo degli errori} \label{sec:errori}
