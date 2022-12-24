@@ -26,7 +26,7 @@
 \maketitle
 
 \section{Scopo della prova}
-Lo scopo della prova è lo studio della caratteristica di uscita dal transistor BJT in configurazione a emettitore comune, ossia ottenere i valori della corrente di collettore $I_C$ in funzione della tensione tra collettore ed emettitore $V_{CE}$  per valori fissati di corrente di base $I_B = -0.2 \; mA $ e $I_B = -0.1 \; mA$. Dal fit lineare pesato delle caratteristica $I_C-V_{CE}$ nella regione attiva, si trovano i parametri che rappresentano la tensione di Early $V_A$ e la resistenza di uscita per un valore fissato di $I_B$, quindi si calcola la conduttanza di uscita $g$ e il guadagno di corrente $\beta$. 
+Lo scopo della prova è lo studio della caratteristica di uscita di un transistor BJT in configurazione a emettitore comune, ossia ottenere i valori della corrente di collettore $I_C$ in funzione della tensione tra collettore ed emettitore $V_{CE}$  per valori fissati di corrente di base $I_B = -0.2 \; mA $ e $I_B = -0.1 \; mA$. Dal fit lineare pesato delle caratteristica $I_C-V_{CE}$ nella regione attiva, si trovano i parametri che rappresentano la tensione di Early $V_A$ e la resistenza di uscita per un valore fissato di $I_B$, quindi si calcola la conduttanza di uscita $g$ e il guadagno di corrente $\beta$. Si sono poi confrontati i valori ottenuti con quelli attesi.
 
 \section{Schema del circuito}
 \begin{figure}[!ht]
@@ -44,7 +44,7 @@ Lo scopo della prova è lo studio della caratteristica di uscita dal transistor 
   \end{minipage}
 \end{figure}
 
-In Fig.\ref{fig:Circuito per corrente di base} si può vedere il circuito utilizzato per settare la corrente di base del transistor, prima a $I_B = -0.2 \; mA $ e poi $I_B = -0.1 \; mA$; in questo modo è stato possibile infatti impostare la corrente precisa, cortocircuitando i punti A e C del circuito e utilizzando il multimetro digitale collegato fra i punti B e D. In Fig.\ref{fig:Circuito utilizzato per la prova}, invece, si può vedere il circuito effettivamente utilizzato per raccogliere i dati durante l'esperienza; è stato cortocircuitato il collegamento fra B e D in modo da non modificare più la corrente di base e si è invece posizionato il multimetro fra A e C per misurare la corrente in uscita dal transistor. Inoltre al punto C è stato collegato anche l'oscilloscopio per le misure di tensione (ovviamente l'altro capo dell'oscilloscopio è collegato al GND).
+In Fig.\ref{fig:Circuito per corrente di base} si può vedere il circuito utilizzato per settare la corrente di base del transistor, prima a $I_B = -0.2 \; mA $ e poi $I_B = -0.1 \; mA$; in questo modo è stato possibile infatti impostare la corrente precisa, cortocircuitando i punti A e C del circuito e utilizzando il multimetro digitale collegato fra i punti B e D. In Fig.\ref{fig:Circuito utilizzato per la prova}, invece, si può vedere il circuito effettivamente utilizzato per raccogliere i dati durante l'esperienza; è stato cortocircuitato il collegamento fra B e D in modo da non modificare più la corrente di base e si è invece posizionato il multimetro fra A e C per misurare la corrente in uscita dal transistor. Inoltre al punto C è stato collegato anche l'oscilloscopio per poter effettuare contemporaneamente le misure di tensione (ovviamente l'altro capo dell'oscilloscopio è collegato al GND).
 
 \section{Strumenti e materiali utilizzati}
 Per l'esperienza sono stati utilizzati i seguenti strumenti e materiali:
@@ -231,7 +231,7 @@ In Tab.\ref{tab:-0.2 mA} e in Tab.\ref{tab:-0.1 mA} sono riportati, con i relati
 \end{figure}
 
 \newpage
-In Fig.\ref{fig:g-tot} possiamo vedere il confronto fra le curve caratteristiche I-V plottate per le due correnti di base. In primo luogo bisogna notare che gli assi presentano il segno - nell'unità di misura perchè in realtà tutte le grandezze rappresentate sono negative; per evitare di rappresentare il tutto nel quarto quadrante del piano cartesiano per convenzione si rappresenta nel primo quadrante specificando il segno opposto degli assi. 
+In Fig.\ref{fig:g-tot} possiamo vedere il confronto fra le curve caratteristiche I-V plottate per le due correnti di base. In primo luogo bisogna notare che gli assi presentano il segno - nell'unità di misura perché in realtà tutte le grandezze rappresentate sono negative (come si può vedere nelle tabelle con i dati); per evitare di rappresentare il tutto nel quarto quadrante del piano cartesiano per convenzione si rappresenta nel primo quadrante specificando il segno opposto degli assi. 
 
 Come possiamo osservare, l'andamento delle curve rispetta qualitativamente quello aspettato (vedi Appendice \ref{sec:curva-caratteristica-transistor}). Inoltre si può subito notare che nella regione attiva, invece del plateau, le due curve presentano una parte lineare leggermente inclinata, testimone del cosiddetto \textit{effetto Early} (nella configurazione a emettitore comune questo effetto è molto più accentuato). 
 
@@ -263,6 +263,8 @@ Come ultimo risultato possiamo dare una stima diretta del guadagno in corrente, 
 \end{equation*}
 
 Fissando un valore di tensione $V_{CE} = 2.00 \; V$ si ottiene $\beta = 156 \pm 40$, per un valore di tensione $V_{CE} = 2.60 \; V$ si ottiene $\beta = 163 \pm 41$ e infine per un valore di tensione $V_{CE} = 3.20 \; V$ si ottiene $\beta = 167 \pm 42$ (per il calcolo degli errori vedere Appendice \ref{sec:errori-beta}). Come possiamo vedere otteniamo valori fra loro compatibili; possiamo quindi procedere con una media pesata, da cui otteniamo $\beta = 162 \pm 41$, compatibile con il valore atteso per il guadagno in corrente. 
+
+\newpage
 
 \section{Appendice}
 
